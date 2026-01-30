@@ -3,46 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Undangan Pernikahan</title>
+<title>The Wedding Of Khoiril & Nisa</title>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:sans-serif;background:#000 url(bg.jpg) center/cover fixed}
-.glass{margin:20px;padding:20px;border-radius:20px;
-background:rgba(255,255,255,.15);backdrop-filter:blur(12px);color:#fff}
-input,button{width:100%;padding:10px;border-radius:12px;border:none;margin:6px 0}
-button{background:#fff;color:#000;font-weight:bold}
-#list{max-height:180px;overflow:auto}
-audio{display:none}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  height:100vh;
+  background:#000 url(bg.jpg) center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Montserrat,sans-serif;
+  color:#fff;
+}
+.page{
+  width:100%;
+  max-width:420px;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:40px 24px;
+}
+.center{text-align:center}
+.top h1{font-size:47px;font-weight:400}
+.top h2{
+  font-family:'Great Vibes',cursive;
+  font-size:121px;
+  line-height:1;
+}
+.bottom{text-align:center}
+.bottom p{font-size:40px;margin-bottom:20px}
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:14px;
+  border-radius:18px;
+  background:rgba(255,255,255,.18);
+  backdrop-filter:blur(12px);
+  color:#fff;
+  font-size:18px;
+  font-weight:600;
+  text-decoration:none;
+}
+.btn span{font-size:20px}
 </style>
 </head>
 
-<body onclick="play()">
+<body>
 
-<div class="glass">
-<h2>💍 Nama & Nama</h2>
-<p>📍 Minggu, 20 April 2026</p>
+<div class="page">
+
+  <!-- ATAS -->
+  <div class="top center">
+    <h1>The Wedding Of</h1>
+    <h2>Khoiril<br>& Nisa</h2>
+  </div>
+
+  <!-- BAWAH -->
+  <div class="bottom">
+    <p>Dear,</p>
+    <a href="#undangan" class="btn">
+      <span>✉️</span> Buka Undangan
+    </a>
+  </div>
+
 </div>
 
-<div class="glass">
-<h3>📨 RSVP & Ucapan</h3>
-<input id="n" placeholder="Nama">
-<input id="u" placeholder="Ucapan">
-<button onclick="kirim()">Kirim 🤍</button>
-<div id="list"></div>
-</div>
-
-<audio id="m" loop>
-<source src="musik.mp3" type="audio/mpeg">
-</audio>
+<!-- HALAMAN 2 (sementara) -->
+<div id="undangan" style="display:none"></div>
 
 <script>
-let p=false;
-function play(){if(!p){m.play();p=true}}
-function kirim(){
- if(!n.value||!u.value)return;
- list.innerHTML+=`<p>💌 <b>${n.value}</b><br>${u.value}</p>`;
- n.value=u.value="";
+document.querySelector('.btn').onclick=()=>{
+  document.body.innerHTML=document.getElementById('page2').innerHTML
 }
 </script>
+
+<!-- PAGE 2 PLACEHOLDER -->
+<template id="page2">
+  <div style="
+    min-height:100vh;
+    background:#000;
+    color:#fff;
+    padding:30px;
+    font-family:Montserrat,sans-serif">
+    <h2>💍 Halaman Undangan</h2>
+    <p>Isi undangan utama di sini…</p>
+  </div>
+</template>
 
 </body>
 </html>
