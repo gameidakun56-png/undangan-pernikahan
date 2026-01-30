@@ -1,0 +1,30 @@
+.glass{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:24px;
+  color:#fff;
+  margin:20px;
+  text-align:center;
+}
+.nama{font-family:'Great Vibes',cursive;font-size:48px}
+.salam{font-size:18px;margin-bottom:10px}
+.isi,.ortu,.penutup{font-size:14px}
+.acara p{margin:10px 0}
+.maps{
+  display:inline-block;
+  margin:12px 0;
+  padding:10px 16px;
+  border-radius:20px;
+  background:rgba(255,255,255,.25);
+  color:#fff;
+  text-decoration:none;
+}
+.rsvp-box input,.rsvp-box textarea{
+  width:100%;margin:6px 0;padding:10px;border:none;border-radius:12px
+}
+.rsvp-box button{
+  width:100%;padding:10px;border:none;border-radius:20px;
+  background:rgba(255,255,255,.35);color:#fff
+}
+.ucapan{max-height:120px;overflow-y:auto;margin-top:10px}
