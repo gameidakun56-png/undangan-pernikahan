@@ -86,47 +86,34 @@ document.querySelector('.btn').onclick=()=>{
 </script>
 
 <!-- PAGE 2 PLACEHOLDER -->
-<section id="undangan" class="glass">
-  <p class="salam">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
-
-  <p class="isi">
-    Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i
-    untuk menghadiri pernikahan kami:
-  </p>
-
-  <h2 class="nama">Khoiril</h2>
-  <p class="ortu">Putra dari Bpk. … & Ibu …</p>
-
-  <h2 class="nama">&</h2>
-
-  <h2 class="nama">Nisa</h2>
-  <p class="ortu">Putri dari Bpk. … & Ibu …</p>
-
-  <div class="acara">
-    <p><b>🗓 Akad</b><br>Minggu, 12 Mei 2026<br>08.00 WIB</p>
-    <p><b>🎉 Resepsi</b><br>Minggu, 12 Mei 2026<br>10.00 WIB</p>
-    <p><b>📍 Lokasi</b><br>Jl. Contoh Alamat Lengkap</p>
-  </div>
-
-  <a class="maps" href="https://maps.google.com" target="_blank">
-    📍 Lihat Lokasi
-  </a>
-
-  <h3 class="judul">💌 Ucapan & Doa</h3>
-
-  <div class="rsvp-box">
-    <input placeholder="Nama" />
-    <textarea placeholder="Tulis ucapan..."></textarea>
-    <button>Kirim</button>
-
-    <div class="ucapan">
-      <p><b>Ani:</b> Semoga sakinah mawaddah warahmah 🤍</p>
-      <p><b>Budi:</b> Lancar sampai hari H ✨</p>
-    </div>
-  </div>
-
-  <p class="penutup">
-    Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i
-    berkenan hadir dan memberikan doa restu 🤍
-  </p>
-</section>
+<template id="page2">
+.glass{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:24px;
+  color:#fff;
+  margin:20px;
+  text-align:center;
+}
+.nama{font-family:'Great Vibes',cursive;font-size:48px}
+.salam{font-size:18px;margin-bottom:10px}
+.isi,.ortu,.penutup{font-size:14px}
+.acara p{margin:10px 0}
+.maps{
+  display:inline-block;
+  margin:12px 0;
+  padding:10px 16px;
+  border-radius:20px;
+  background:rgba(255,255,255,.25);
+  color:#fff;
+  text-decoration:none;
+}
+.rsvp-box input,.rsvp-box textarea{
+  width:100%;margin:6px 0;padding:10px;border:none;border-radius:12px
+}
+.rsvp-box button{
+  width:100%;padding:10px;border:none;border-radius:20px;
+  background:rgba(255,255,255,.35);color:#fff
+}
+.ucapan{max-height:120px;overflow-y:auto;margin-top:10px}
