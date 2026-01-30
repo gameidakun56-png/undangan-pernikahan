@@ -1,52 +1,26 @@
-const chat = document.getElementById("chat");
-const buttonArea = document.getElementById("buttonArea");
-
-const params = new URLSearchParams(window.location.search);
-const guest = params.get("to") || "Tamu Undangan";
-
-let step = 0;
-
-const messages = [
-  "💍 <b>The Wedding Of</b>",
-  "<b>Khoiril & Aisyah</b>",
-  `Kepada Yth.<br><b>${guest}</b>`,
-  "Dengan penuh kebahagiaan kami mengundang Anda untuk hadir pada acara pernikahan kami.",
-  "📅 Ahad, 20 April 2026<br>⏰ 08.00 WIB<br>📍 Kediaman Mempelai Wanita",
-  "Merupakan suatu kehormatan bagi kami apabila Anda berkenan hadir dan memberikan doa restu 🤍"
-];
-
-function addBubble(text, type = "bot") {
-  const div = document.createElement("div");
-  div.className = `bubble ${type}`;
-  div.innerHTML = text;
-  chat.appendChild(div);
-  chat.scrollTop = chat.scrollHeight;
+function bukaUndangan(){
+  document.getElementById('cover').style.display='none';
+  document.getElementById('page2').style.display='block';
+  document.getElementById('page2').scrollIntoView({behavior:'smooth'});
 }
 
-function showTyping(callback) {
-  const typing = document.createElement("div");
-  typing.className = "bubble bot typing";
-  typing.innerText = "sedang mengetik...";
-  chat.appendChild(typing);
-  chat.scrollTop = chat.scrollHeight;
+// COUNTDOWN
+const target = new Date("May 12, 2026 08:00:00").getTime();
 
-  setTimeout(() => {
-    typing.remove();
-    callback();
-  }, 900);
-}
+setInterval(()=>{
+  const now = new Date().getTime();
+  const diff = target - now;
 
-function nextMessage() {
-  if (step < messages.length) {
-    showTyping(() => {
-      addBubble(messages[step]);
-      step++;
-    });
-  } else {
-    buttonArea.innerHTML = `
-      <a href="https://wa.me/6281234567890" target="_blank">
-        <button>💬 Konfirmasi Kehadiran</button>
-      </a>
-    `;
-  }
+  const hari = Math.floor(diff / (1000*60*60*24));
+  const jam  = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+  const menit = Math.floor((diff%(1000*60*60))/(1000*60));
+
+  document.getElementById('countdown').innerHTML =
+    `${hari} Hari • ${jam} Jam • ${menit} Menit`;
+},1000);
+
+// COPY REKENING
+function copyRekening(no){
+  navigator.clipboard.writeText(no);
+  alert('Nomor rekening berhasil disalin');
 }
