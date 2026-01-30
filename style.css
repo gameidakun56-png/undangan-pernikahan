@@ -118,6 +118,14 @@ body{
   display:none;
 }
 
+.fade-out{
+  animation:fadeOut .8s forwards;
+}
+
+@keyframes fadeOut{
+  to{opacity:0; transform:scale(.98)}
+}
+
 /* SETIAP BAGIAN = 1 LAYAR */
 .scene{
   min-height:100vh;
