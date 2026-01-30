@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Undangan Pernikahan</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Undangan Pernikahan</title>
+<style>
+body{margin:0;font-family:sans-serif;background:#000 url(bg.jpg) center/cover fixed}
+.glass{margin:20px;padding:20px;border-radius:20px;
+background:rgba(255,255,255,.15);backdrop-filter:blur(12px);color:#fff}
+input,button{width:100%;padding:10px;border-radius:12px;border:none;margin:6px 0}
+button{background:#fff;color:#000;font-weight:bold}
+#list{max-height:180px;overflow:auto}
+audio{display:none}
+</style>
 </head>
-<body style="font-family: Arial; text-align:center; padding:40px">
-  <h1>🎉 Website Undangan Aktif</h1>
-  <p>GitHub Pages berhasil 🚀</p>
+
+<body onclick="play()">
+
+<div class="glass">
+<h2>💍 Nama & Nama</h2>
+<p>📍 Minggu, 20 April 2026</p>
+</div>
+
+<div class="glass">
+<h3>📨 RSVP & Ucapan</h3>
+<input id="n" placeholder="Nama">
+<input id="u" placeholder="Ucapan">
+<button onclick="kirim()">Kirim 🤍</button>
+<div id="list"></div>
+</div>
+
+<audio id="m" loop>
+<source src="musik.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let p=false;
+function play(){if(!p){m.play();p=true}}
+function kirim(){
+ if(!n.value||!u.value)return;
+ list.innerHTML+=`<p>💌 <b>${n.value}</b><br>${u.value}</p>`;
+ n.value=u.value="";
+}
+</script>
+
 </body>
 </html>
