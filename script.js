@@ -24,3 +24,16 @@ function copyRekening(no){
   navigator.clipboard.writeText(no);
   alert('Nomor rekening berhasil disalin');
 }
+
+document.getElementById("openInvitation").addEventListener("click", function () {
+  const cover = document.getElementById("cover");
+  const page2 = document.getElementById("page2");
+
+  cover.classList.add("fade-out");
+
+  setTimeout(() => {
+    cover.style.display = "none";
+    page2.style.display = "block";
+    window.scrollTo(0,0);
+  }, 800);
+});
