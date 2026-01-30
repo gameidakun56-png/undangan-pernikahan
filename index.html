@@ -2,87 +2,87 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Wedding Of Khoiril & Nisa</title>
 
 <!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
-<style>
-*{margin:margin-top: 0px; margin-bottom:  2px;padding:0;box-sizing:border-box}
-body{
-  height:100vh;
-  background:#000 url(DSC07804.jpg) center/cover no-repeat;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-family:Montserrat,sans-serif;
-  color:#fff;
-}
-.page{
-  width:100%;
-  max-width:420px;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  padding:40px 24px;
-}
-.center{text-align:center}
-.top h1{font-size:20px;font-weight:400}
-.top h2{
-  font-family:'Great Vibes',cursive;
-  font-size:50px;
-  line-height:1;
-}
-.bottom{text-align:center}
-.bottom p{font-size:15px;margin-bottom:40px}
-
-.btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:14px;
-  border-radius:15px;
-  background:rgba(255,255,255,.18);
-  backdrop-filter:blur(12px);
-  color:#fff;
-  font-size:15px;
-  font-weight:600;
-  text-decoration:none;
-}
-.btn span{font-size:20px}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="page">
-
-  <!-- ATAS -->
+<!-- PAGE 1 / COVER -->
+<section id="cover" class="page">
   <div class="top center">
-    <h1>The Wedding Of</h1><p>
+    <h1>The Wedding Of</h1>
     <h2>Khoiril & Nisa</h2>
   </div>
 
-  <!-- BAWAH -->
   <div class="bottom">
     <p>Dear,</p>
-    <a href="#undangan" class="btn">
+    <button class="btn" onclick="bukaUndangan()">
       <span>✉️</span> Buka Undangan
+    </button>
+  </div>
+</section>
+
+<!-- PAGE 2 / UNDANGAN -->
+<section id="page2" class="glass">
+
+  <p class="salam">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+  <p class="isi">
+    Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
+    mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.
+  </p>
+
+  <!-- COUNTDOWN -->
+  <div id="countdown" class="countdown"></div>
+
+  <!-- MEMPELAI -->
+  <div class="mempelai">
+    <h3>Khoiril</h3>
+    <a href="https://instagram.com/" target="_blank">Instagram</a>
+
+    <h3>&</h3>
+
+    <h3>Nisa</h3>
+    <a href="https://instagram.com/" target="_blank">Instagram</a>
+  </div>
+
+  <!-- ACARA -->
+  <div class="acara">
+    <p><b>Akad:</b> Minggu, 12 Mei 2026 • 08.00 WIB</p>
+    <p><b>Resepsi:</b> Minggu, 12 Mei 2026 • 10.00 WIB</p>
+    <p><b>Lokasi:</b> Jl. Contoh Alamat Lengkap</p>
+
+    <a href="https://maps.google.com" target="_blank" class="btn small">
+      📍 Google Maps
     </a>
   </div>
 
-</div>
+  <!-- WEDDING GIFT -->
+  <h4>🎁 Wedding Gift</h4>
+  <div class="gift" onclick="copyRekening('1234567890')">
+    BCA – 1234567890<br>a.n Khoiril
+  </div>
 
-<!-- HALAMAN 2 (sementara) -->
-<div id="undangan" style="display:none"></div>
+  <!-- RSVP -->
+  <h4>💌 Ucapan & Doa</h4>
+  <div class="rsvp">
+    <input type="text" placeholder="Nama">
+    <textarea placeholder="Ucapan..."></textarea>
+    <button class="btn small">Kirim</button>
+  </div>
 
-<script>
-document.querySelector('.btn').onclick=()=>{
-  document.body.innerHTML=document.getElementById('page2').innerHTML
-}
-</script>
+  <p class="penutup">
+    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+    Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu 🤍
+  </p>
 
-<!-- PAGE 2 PLACEHOLDER -->
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
