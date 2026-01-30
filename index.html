@@ -29,60 +29,93 @@
 </section>
 
 <!-- PAGE 2 / UNDANGAN -->
-<section id="page2" class="glass">
+<section id="page2">
 
-  <p class="salam">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
-  <p class="isi">
-    Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
-    mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.
-  </p>
-
-  <!-- COUNTDOWN -->
-  <div id="countdown" class="countdown"></div>
+  <!-- SAMBUTAN -->
+  <section class="scene bg-1">
+    <div class="glass-box">
+      <p class="salam">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+      <p class="isi">
+        Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
+        mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.
+      </p>
+      <div id="countdown"></div>
+    </div>
+  </section>
 
   <!-- MEMPELAI -->
-  <div class="mempelai">
-    <h3>Khoiril</h3>
-    <a href="https://instagram.com/" target="_blank">Instagram</a>
+  <section class="scene bg-2">
+    <div class="glass-box">
+      <h3>Khoiril</h3>
+      <a href="#">Instagram</a>
 
-    <h3>&</h3>
+      <h3>&</h3>
 
-    <h3>Nisa</h3>
-    <a href="https://instagram.com/" target="_blank">Instagram</a>
-  </div>
+      <h3>Nisa</h3>
+      <a href="#">Instagram</a>
+    </div>
+  </section>
 
-  <!-- ACARA -->
-  <div class="acara">
-    <p><b>Akad:</b> Minggu, 12 Mei 2026 • 08.00 WIB</p>
-    <p><b>Resepsi:</b> Minggu, 12 Mei 2026 • 10.00 WIB</p>
-    <p><b>Lokasi:</b> Jl. Contoh Alamat Lengkap</p>
+  <!-- ACARA (LEBIH PANJANG) -->
+  <section class="scene scene-double bg-3">
+    <div class="glass-box">
+      <h4>Akad & Resepsi</h4>
+      <p>Minggu, 12 Mei 2026</p>
+      <p>08.00 – 12.00 WIB</p>
 
-    <a href="https://maps.google.com" target="_blank" class="btn small">
-      📍 Google Maps
-    </a>
-  </div>
+      <hr>
 
-  <!-- WEDDING GIFT -->
-  <h4>🎁 Wedding Gift</h4>
-  <div class="gift" onclick="copyRekening('1234567890')">
-    BCA – 1234567890<br>a.n Khoiril
-  </div>
+      <h4>Ngunduh Mantu</h4>
+      <p>Minggu, 19 Mei 2026</p>
+      <p>10.00 WIB – selesai</p>
+
+      <a class="btn small" href="https://maps.google.com" target="_blank">
+        📍 Google Maps
+      </a>
+    </div>
+  </section>
+
+  <!-- GALERI -->
+  <section class="scene bg-4">
+    <div class="glass-box">
+      <h4>Galeri</h4>
+      <p>(nanti kita isi foto)</p>
+    </div>
+  </section>
+
+  <!-- KADO DIGITAL -->
+  <section class="scene plain">
+    <div class="glass-box">
+      <h4>🎁 Wedding Gift</h4>
+
+      <div class="gift" onclick="copyRekening('1234567890')">
+        BCA – 1234567890<br>a.n Khoiril
+      </div>
+
+      <div class="gift" onclick="copyRekening('0987654321')">
+        BRI – 0987654321<br>a.n Nisa
+      </div>
+    </div>
+  </section>
 
   <!-- RSVP -->
-  <h4>💌 Ucapan & Doa</h4>
-  <div class="rsvp">
-    <input type="text" placeholder="Nama">
-    <textarea placeholder="Ucapan..."></textarea>
-    <button class="btn small">Kirim</button>
-  </div>
+  <section class="scene plain">
+    <div class="glass-box">
+      <h4>💌 Ucapan & Doa</h4>
+      <input type="text" placeholder="Nama">
+      <textarea placeholder="Ucapan..."></textarea>
+      <button class="btn small">Kirim</button>
+    </div>
+  </section>
 
-  <p class="penutup">
-    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
-    Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu 🤍
-  </p>
+  <!-- PENUTUP -->
+  <section class="scene bg-5">
+    <div class="glass-box">
+      <p class="penutup">
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+        Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu 🤍
+      </p>
+    </div>
+  </section>
 
 </section>
-
-<script src="script.js"></script>
-</body>
-</html>
