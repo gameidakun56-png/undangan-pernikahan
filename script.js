@@ -10,7 +10,7 @@ if (guestName) {
 document.getElementById("openInvitation").addEventListener("click", () => {
   // contoh pindah ke halaman utama
   window.location.href = "home.html";
-});
+}
 
 // simple scroll reveal
 const observer = new IntersectionObserver(entries => {
