@@ -11,3 +11,16 @@ document.getElementById("openInvitation").addEventListener("click", () => {
   // contoh pindah ke halaman utama
   window.location.href = "home.html";
 });
+
+// simple scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-up");
+    }
+  });
+});
+
+document.querySelectorAll(".content").forEach(el => {
+  observer.observe(el);
+});
