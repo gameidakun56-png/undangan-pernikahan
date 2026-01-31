@@ -1,123 +1,33 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Wedding Of Khoiril & Nisa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Wedding Of Khoiril & Nisa</title>
 
-<!-- GOOGLE FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- PAGE 1 / COVER -->
-<section id="cover" class="screen active">
-  <div class="page">
-    <div class="top center">
-      <h1>The Wedding Of</h1>
-      <h2>Khoiril & Nisa</h2>
-    </div>
+<section class="cover">
+  <div class="glass cover-card">
 
-    <div class="bottom">
-      <p>Dear,</p>
-      <button id="openInvitation" class="btn">
-        <span>✉️</span> Buka Undangan
-      </button>
-    </div>
+    <p class="subtitle">The Wedding Of</p>
+    <h1 class="title">Khoiril & Nisa</h1>
+
+    <div class="ornament"></div>
+
+    <p class="dear">Dear,</p>
+    <h2 id="guest-name">Tamu Undangan</h2>
+
+    <button id="openInvitation">Buka Undangan</button>
+
   </div>
-</section>
-
-<!-- PAGE 2 / UNDANGAN -->
-<section id="page2" class="screen">
-  <!-- SAMBUTAN -->
-  <section class="scene bg-1">
-    <div class="glass-box">
-      <p class="salam">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
-      <p class="isi">
-        Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
-        mengundang Bapak/Ibu/Saudara/i untuk menghadiri pernikahan kami.
-      </p>
-      <div id="countdown"></div>
-    </div>
-  </section>
-
-  <!-- MEMPELAI -->
-  <section class="scene bg-2">
-    <div class="glass-box">
-      <h3>Khoiril</h3>
-      <a href="#">Instagram</a>
-
-      <h3>&</h3>
-
-      <h3>Nisa</h3>
-      <a href="#">Instagram</a>
-    </div>
-  </section>
-
-  <!-- ACARA (LEBIH PANJANG) -->
-  <section class="scene scene-double bg-3">
-    <div class="glass-box">
-      <h4>Akad & Resepsi</h4>
-      <p>Minggu, 12 Mei 2026</p>
-      <p>08.00 – 12.00 WIB</p>
-
-      <hr>
-
-      <h4>Ngunduh Mantu</h4>
-      <p>Minggu, 19 Mei 2026</p>
-      <p>10.00 WIB – selesai</p>
-
-      <a class="btn small" href="https://maps.google.com" target="_blank">
-        📍 Google Maps
-      </a>
-    </div>
-  </section>
-
-  <!-- GALERI -->
-  <section class="scene bg-4">
-    <div class="glass-box">
-      <h4>Galeri</h4>
-      <p>(nanti kita isi foto)</p>
-    </div>
-  </section>
-
-  <!-- KADO DIGITAL -->
-  <section class="scene plain">
-    <div class="glass-box">
-      <h4>🎁 Wedding Gift</h4>
-
-      <div class="gift" onclick="copyRekening('1234567890')">
-        BCA – 1234567890<br>a.n Khoiril
-      </div>
-
-      <div class="gift" onclick="copyRekening('0987654321')">
-        BRI – 0987654321<br>a.n Nisa
-      </div>
-    </div>
-  </section>
-
-  <!-- RSVP -->
-  <section class="scene plain">
-    <div class="glass-box">
-      <h4>💌 Ucapan & Doa</h4>
-      <input type="text" placeholder="Nama">
-      <textarea placeholder="Ucapan..."></textarea>
-      <button class="btn small">Kirim</button>
-    </div>
-  </section>
-
-  <!-- PENUTUP -->
-  <section class="scene bg-5">
-    <div class="glass-box">
-      <p class="penutup">
-        Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
-        Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu 🤍
-      </p>
-    </div>
 </section>
 
 <script src="script.js"></script>
 </body>
+</html>
