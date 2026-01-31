@@ -106,3 +106,93 @@ button:hover {
     transform: translateY(0);
   }
 }
+
+.section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 40px 30px;
+}
+
+/* BACKGROUND PER SECTION */
+.bg-hero {
+  background: url("img/bg-hero.jpg") center/cover no-repeat;
+}
+
+.bg-sambutan {
+  background: url("img/bg-sambutan.jpg") center/cover no-repeat;
+}
+
+.bg-mempelai {
+  background: url("img/bg-mempelai.jpg") center/cover no-repeat;
+}
+
+.bg-acara {
+  background: url("img/bg-acara.jpg") center/cover no-repeat;
+}
+
+/* TEXT */
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #eee;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* MEMPELAI */
+.couple {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.person h3 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+}
+
+.and {
+  font-size: 28px;
+  color: #fff;
+}
+
+/* ACARA */
+.event {
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+.footer {
+  background: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ANIMATION */
+.fade-up {
+  animation: fadeUp 1s ease both;
+}
