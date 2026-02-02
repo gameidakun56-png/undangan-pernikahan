@@ -12,13 +12,24 @@ function openInvitation() {
   document.body.classList.remove("lock-scroll");
 
   // sembunyikan cover
-  document.getElementById("cover").style.display = "none";
+  const cover = document.getElementById("cover");
+  if (cover) cover.style.display = "none";
 
-  // tampilkan home
-  
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = targetDate - now;
+  // tampilkan sambutan
+  const home = document.getElementById("sambutan");
+  if (home) home.classList.remove("hidden");
+
+  // play music
+  const music = document.getElementById("bgMusic");
+  if (music) {
+    music.volume = 0.7;
+    music.play().catch(() => {});
+  }
+
+  // tampilkan tombol musik
+  const toggle = document.getElementById("musicToggle");
+  if (toggle) toggle.classList.remove("hidden");
+}
 
   document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
   document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
