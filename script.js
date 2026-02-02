@@ -31,7 +31,7 @@ function openInvitation() {
   if (toggle) toggle.classList.remove("hidden");
 }
 
-// COUNTDOWN
+  // COUNTDOWN
 const targetDate = new Date("March 24, 2026 00:00:00").getTime();
 
 setInterval(() => {
