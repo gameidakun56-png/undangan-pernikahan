@@ -15,8 +15,8 @@ if (guestName) {
 }
 
 // Tombol buka undangan
-document.getElementById("openInvitation").addEventListener("click", () => {
-  // contoh pindah ke halaman utama
+function openInvitation() {
+  sessionStorage.setItem("openedInvitation", "true");
   window.location.href = "home.html";
 }
 
