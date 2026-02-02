@@ -32,3 +32,23 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll(".content").forEach(el => {
   observer.observe(el);
 });
+
+const music = document.getElementById("bgMusic");
+const toggle = document.getElementById("musicToggle");
+
+if (music) {
+  music.volume = 0.7;
+  music.play().catch(() => {});
+}
+
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      toggle.innerText = "🔊";
+    } else {
+      music.pause();
+      toggle.innerText = "🔇";
+    }
+  });
+}
