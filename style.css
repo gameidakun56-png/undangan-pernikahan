@@ -141,29 +141,90 @@ body {
 
 .section {
   min-height: 100vh;
-  padding: 80px 20px;
+  padding: 60px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
-.section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
+.hero {
+  background: url("assets/bg-home.jpg") center/cover no-repeat;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
+.glass-box {
   width: 100%;
   max-width: 420px;
-  text-align: center;
-  padding: 40px 30px;
+  min-height: 75vh;
+  padding: 40px 25px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
 }
 
+.spacer.top {
+  flex: 1;
+}
+
+.spacer.middle {
+  flex: 1;
+}
+
+.content-bottom {
+  text-align: center;
+}
+
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin: 10px 0 20px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.countdown div {
+  flex: 1;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.2);
+}
+
+.countdown span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.countdown small {
+  display: block;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.btn-calendar {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.85);
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+  
 /* BACKGROUND PER SECTION */
 .bg-hero {
   background: url("img/bg-hero.jpg") center/cover no-repeat;
