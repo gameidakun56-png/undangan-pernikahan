@@ -1,3 +1,11 @@
+// PROTEKSI AKSES HOME
+if (window.location.pathname.includes("home.html")) {
+  const opened = sessionStorage.getItem("openedInvitation");
+  if (!opened) {
+    window.location.href = "index.html";
+  }
+}
+
 // Ambil nama tamu dari URL ?to=
 const params = new URLSearchParams(window.location.search);
 const guestName = params.get("to");
