@@ -26,20 +26,31 @@ function openInvitation() {
   // buka scroll
   document.body.classList.remove("lock-scroll");
 
-  // sembunyikan cover
-  if (cover) cover.style.display = "none";
-
-  // tampilkan isi undangan
-  if (sambutan) sambutan.classList.remove("hidden");
-
-  // play music
-  if (music) {
-    music.volume = 0.7;
-    music.play().catch(() => {});
+  // animasi cover keluar
+  if (cover) {
+    cover.classList.add("hide");
   }
 
-  // tampilkan tombol musik
-  if (toggle) toggle.classList.remove("hidden");
+  // delay supaya animasi cover selesai
+  setTimeout(() => {
+    if (cover) cover.style.display = "none";
+
+    // tampilkan sambutan dengan animasi
+    if (sambutan) {
+      sambutan.classList.remove("hidden");
+      sambutan.classList.add("show");
+    }
+
+    // play music
+    if (music) {
+      music.volume = 0.7;
+      music.play().catch(() => {});
+    }
+
+    // tampilkan tombol musik
+    if (toggle) toggle.classList.remove("hidden");
+
+  }, 800); // SESUAI DENGAN DURASI CSS
 }
 
 // ===============================
