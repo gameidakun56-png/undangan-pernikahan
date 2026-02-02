@@ -13,6 +13,11 @@ a {
   display: none;
 }
 
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
