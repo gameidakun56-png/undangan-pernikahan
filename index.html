@@ -12,21 +12,34 @@
 </head>
 <body>
 
-<section class="cover">
-  <div class="glass cover-card">
+<body>
 
+<!-- COVER -->
+<section id="cover" class="cover">
+  <div class="glass cover-card">
     <p class="subtitle">The Wedding Of</p>
     <h1 class="title">Khoiril & Nisa</h1>
-
-    <div class="ornament"></div>
 
     <p class="dear">Dear,</p>
     <h2 id="guest-name">Tamu Undangan</h2>
 
-    <a href="javascript:void(0)" class="open-btn" onclick="openInvitation()">
-  Buka Undangan
-</a>
+    <button class="open-btn" onclick="openInvitation()">
+      Buka Undangan
+    </button>
+  </div>
 </section>
+
+<!-- HOME / ISI UNDANGAN -->
+<section id="home" class="hero section bg-hero hidden">
+  <!-- semua isi undangan kamu pindah ke sini -->
+</section>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+  <source src="audio/music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" class="music-btn hidden">🔊</button>
 
 <script src="script.js"></script>
 </body>
