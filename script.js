@@ -15,8 +15,7 @@ function openInvitation() {
   document.getElementById("cover").style.display = "none";
 
   // tampilkan home
-  document.getElementById("home").classList.remove("hidden");
-
+  
 <script>
 const targetDate = new Date("March 24, 2026 00:00:00").getTime();
 
