@@ -16,9 +16,6 @@ function openInvitation() {
 
   // tampilkan home
   
-<script>
-const targetDate = new Date("March 24, 2026 00:00:00").getTime();
-
 setInterval(() => {
   const now = new Date().getTime();
   const distance = targetDate - now;
