@@ -83,19 +83,21 @@ body {
 }
 
 /* BUTTON */
-button {
+.open-btn {
+  display: inline-block;
+  margin-top: 20px;
   background: rgba(255,255,255,0.25);
   border: 1px solid rgba(255,255,255,0.4);
   color: #fff;
-  padding: 14px 30px;
+  padding: 14px 34px;
   border-radius: 50px;
   font-size: 14px;
-  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
   backdrop-filter: blur(10px);
   transition: 0.3s ease;
 }
 
-button:hover {
+.open-btn:hover {
   background: rgba(255,255,255,0.4);
   transform: translateY(-2px);
 }
